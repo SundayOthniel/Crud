@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateStudent</title>
+</head>
+<body>
+    <h1>Update student data</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>First Name:</label>
+        <input type="text" name="first_name" value="{{GradeStudent.first_name}}" required><br><br>
+      
+        <label>Last Name:</label>
+        <input type="text" name="last_name" value="{{GradeStudent.last_name}}" required><br><br>
+      
+        <label for="Score">Score:</label>
+        <input type="text" name="score" value="{{GradeStudent.score}}" required><br><br>
+
+        <input type="submit" value="Update">
+      </form>
+      
+</body>
+</html>
